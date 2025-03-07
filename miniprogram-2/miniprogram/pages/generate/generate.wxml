@@ -1,0 +1,13 @@
+<view style="padding-top: {{navbarHeight}}px;"> </view>
+<view class="img_row" wx:if="{{!isLoading}}">
+  <view class="img_box" style="margin-right: 10px;" data-url="{{imgUrl}}" bind:tap="previewImg">
+    <image src="{{imgUrl}}" mode="aspectFill"/>
+  </view>
+  <view class="img_box" bind:tap="previewImg" data-url="{{translateUrl}}">
+    <image src="{{translateUrl}}" mode="aspectFill" />
+  </view>
+</view>
+<view class="btn_list" wx:if="{{!isLoading}}">
+  <view class="cancel_btn" style="margin-right: 20px;" bind:tap="goBack">返回</view>
+  <view class="save_btn" bind:tap="saveImg">保存</view>
+</view>

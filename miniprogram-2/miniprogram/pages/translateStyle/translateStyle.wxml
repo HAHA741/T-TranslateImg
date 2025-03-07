@@ -1,0 +1,11 @@
+<!--pages/translateStyle/translateStyle.wxml-->
+<!-- <navigation-bar title="Anime" back="{{false}}" color="black" background="#FFF"></navigation-bar> -->
+<view style="padding-top: {{navbarHeight}}px;"> </view>
+<scroll-view class="scrollarea" scroll-y type="list">
+<view class="style_item" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="text" capture-catch:tap="changeStyle" data-index="{{index}}" data-item="{{item}}">{{item.text}}
+  <checkbox checked="{{item.checked}}"></checkbox>
+  </view>
+<view class="btn_list">
+   <view class="translate_btn" bindtap="translateImg">确认风格</view>
+  </view>
+</scroll-view>

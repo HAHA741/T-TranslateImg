@@ -1,0 +1,41 @@
+/* pages/translateStyle/translateStyle.wxss */
+.scrollarea{
+  flex: 1;
+  overflow-y: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.style_item{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin:10px 0 ;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn_list{
+  // width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+ 
+}
+.translate_btn{
+  cursor: pointer;
+  background-color: #e5bdff;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  // flex:0 0 auto;
+}

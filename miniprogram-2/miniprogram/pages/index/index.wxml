@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<navigation-bar title="Anime" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+  <view class="img_box">
+  <view class="img_main">
+    <image class="update_img" src="{{selectedImg}}" mode="aspectFill"></image>
+  </view>
+ 
+  </view>
+  <view style="margin-top: 20rpx;">
+    <view class="update_btn" bindtap="chooseImg"> 上传图片</view>
+  </view>
+  <view class="translate_style_box">
+  <view class="translate_style">
+  <text >风格</text>
+    <view class="update_btn" style="margin-left: auto;" bindtap="goTranslateStyle"> {{style.text}}</view>
+  </view>
+
+  
+  </view>
+
+
+  <view class="btn_list" >
+    <!-- bindtap="translateImg" -->
+   <view class="translate_btn" bindtap="translateImg">生成图片</view>
+  </view>
+
+  </view>
+</scroll-view>
