@@ -20,9 +20,9 @@ const formatNumber = (n: number) => {
 let apiUrl = '';
 if (wx.getSystemInfoSync().platform === 'devtools') {
   // 开发环境
-  apiUrl = 'http://49.232.152.51/translateImg';
+  apiUrl = 'https://www.tenetww.xyz/translateImg';
 } else {
   // 生产环境
-  apiUrl = 'http://49.232.152.51';
+  apiUrl = 'https://www.tenetww.xyz/translateImg';
 }
 export  {apiUrl}

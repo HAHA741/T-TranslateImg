@@ -7,6 +7,7 @@ const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia0
 console.log(utils,'utils')
 Component({
   data: {
+    navbarHeight:0,
     style:{
       text:"漫画风",
       description:"修改为漫画风格",
@@ -52,6 +53,7 @@ Component({
           that.setData({
             selectedImg:path
           })
+          console.log(path,'文件路径')
           wx.uploadFile({
             url:utils.apiUrl+"/api/file/uploadFile",
             filePath:path,
@@ -60,7 +62,7 @@ Component({
             },
             name:'file',
             success(res){
-              console.log('上传成功',JSON.parse(res.data).data)
+              console.log('上传成功',res.data)
               that.data.imgPath = JSON.parse(res.data).data
             }
           })
@@ -100,11 +102,11 @@ Component({
   },
   attached() {
     // const plaintext = "admin";
+    const menuButtonInfo = wx.getMenuButtonBoundingClientRect(); // 获取菜单按钮（右上角小图标）信息
+    const navbarHeight = menuButtonInfo.top + menuButtonInfo.height + 10;  // 自定义导航栏的高度
     let password = md5("admin")
     console.log(password,'password')
-
-
-    wx.request({
+   wx.request({
       url:utils.apiUrl+"/api/user/login",
       // header:{
       //   'Content-Type': 'application/x-www-form-urlencoded'
@@ -117,9 +119,13 @@ Component({
       success(res:any){
         console.log(res,'登录')
         wx.setStorageSync('token',res.data.data.token)
+      },
+      fail(res:any){
+        console.log(res,'登录失败')
       }
 
     })
+    this.setData({ navbarHeight });
     console.log('组件已经被加载');
     // 类似于 onLoad，可以在这里初始化数据等
   },

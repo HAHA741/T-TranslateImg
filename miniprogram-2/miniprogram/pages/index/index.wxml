@@ -1,5 +1,6 @@
 <!--index.wxml-->
-<navigation-bar title="Anime" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<!-- <navigation-bar title="Anime" back="{{false}}" color="black" background="#FFF"></navigation-bar> -->
+<view style="padding-top: {{navbarHeight}}px;"> </view>
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
   <view class="img_box">

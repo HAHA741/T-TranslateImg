@@ -55,7 +55,7 @@ Page({
         wx.request({
         url:"https://api.coze.cn/v1/workflow/run",
         header:{
-          Authorization: "Bearer pat_k24P15wX1IHGOkmzpxiwlqay9EHk4IUaoZFBey6tU8y1LxgTRYLhpHTH0CqyDxdq"
+          Authorization: "Bearer pat_XdZhO4EBIfE6ml2ehxMJbNi5bbtHK0lMsxQ96VjuyyaYf3d6TXnZBNbOzNDrvZ3Q"
         },
         data:{
           workflow_id:"7469985624058150964",
